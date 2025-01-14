@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  min-height: 100dvh;
+  background-color: #f8f8f8;
+  font-family: "Poppins", sans-serif;
+  color: #121725;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 80%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.container .image-section {
+  flex: 2.5;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container .image-section img {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+.container .product-section {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  padding: 4rem;
+  background-color: #fff5e6;
+}
+.container .product-section .divider {
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+.container .product-section .reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container .product-section .reviews .review-text {
+  color: #6699ff;
+  cursor: pointer;
+}
+.container .product-section .reviews .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-inline: 1rem;
+  gap: 0.3rem;
+}
+.container .product-section .reviews .icons .star-icon:last-child {
+  background-image: linear-gradient(90deg, orange 50%, #404040 50%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.container .product-section .reviews .icons .star-icon:not(:last-child) {
+  color: orange;
+}
+.container .product-section .list {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container .product-section .list .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.container .product-section .list .list-item .plus-icon {
+  color: green;
+}
+.container .product-section .colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.container .product-section .colors .color {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.container .product-section .colors .color.selected-color {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+.container .product-section .colors .color.black {
+  background: #474747;
+}
+.container .product-section .colors .color.white {
+  background: #f5f5f5;
+}
+.container .product-section .colors .color.blue {
+  background: #7185a7;
+}
+.container .product-section .colors .color.purple {
+  background: #b3aee8;
+}
+.container .product-section .price {
+  font-size: 2em;
+}
+.container .product-section .buy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.container .product-section .buy-container .add-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.container .product-section .buy-container .add-wrapper i {
+  cursor: pointer;
+}
+.container .product-section .buy-container .add-to-cart-btn {
+  padding: 0.8em 1em;
+  border: none;
+  background: orangered;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+}
+.container .product-section .delivery-expectancy {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

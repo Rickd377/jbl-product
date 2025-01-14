@@ -1,0 +1,142 @@
+.container {
+  width: 80%;
+  height: 90vh;
+  @include flex;
+  box-shadow: 3px 5px 10px rgba($black, .1);
+  background-color: #fff;
+  border-radius: 3rem;
+  overflow: hidden;
+
+
+  .image-section {
+    flex: 2.5;
+    height: 100%;
+    @include flex;
+
+    img {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  .product-section {
+    flex: 1;
+    @include flex(start, start, column);
+    gap: 1rem;
+    height: 100%;
+    padding: 4rem;
+    background-color: mixcolor($white, #fff1db, 30%);
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: $black;
+    }
+
+    .reviews {
+      @include flex;
+
+      .review-text {
+        color: mixcolor($white, $blue, 40%);
+        cursor: pointer;
+      }
+
+      .label {
+        @include flex;
+        margin-inline: 1rem;
+        gap: .3rem;
+      }
+
+      .icons .star-icon {
+        &:last-child {
+          background-image: linear-gradient(90deg, orange 50%, mixcolor($black, $gray, 50%) 50%);
+          color: transparent;
+          background-clip: text;
+        }
+      
+        &:not(:last-child) {
+          color: orange;
+        }
+      }
+    }
+
+    .list {
+      @include flex(start, start, column);
+      gap: 1rem;
+
+      .list-item {
+        @include flex;
+        gap: .5rem;
+
+        .plus-icon {
+          color: green;
+        }
+      }
+    }
+
+    .colors {
+      @include flex;
+      gap: 1rem;
+      margin-block: 1rem;
+
+      .color {
+        width: 1.5rem;
+        aspect-ratio: 1;
+        cursor: pointer;
+        border: 1px solid #ccc;
+
+        &.selected-color {
+          outline: 2px solid black;
+          outline-offset: 2px;
+        }
+
+        &.black {
+          background: #474747;
+        }
+
+        &.white {
+          background: #f5f5f5;
+        }
+
+        &.blue {
+          background: #7185a7;
+        }
+
+        &.purple {
+          background: #b3aee8;
+        }
+      }
+    }
+
+    .price {
+      font-size: 2em;
+    }
+
+    .buy-container {
+      @include flex;
+      gap: 1rem;
+      margin-block: 1rem;
+
+      .add-wrapper {
+        @include flex;
+        gap: .5rem;
+
+        i {
+          cursor: pointer;
+        }
+      }
+
+      .add-to-cart-btn {
+        padding: .8em 1em;
+        border: none;
+        background: orangered;
+        font-family: $poppins;
+        color: white;
+        font-weight: 600;
+      }
+    }
+
+    .delivery-expectancy {
+      color: green;
+    }
+  }
+}
